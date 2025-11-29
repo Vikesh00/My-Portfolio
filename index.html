@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Vikesh Vishwakarma — Frontend Developer. Portfolio showcasing projects, skills and contact information." />
+  <title>Vikesh Vish | Frontend Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vikesh Vish | Frontend Developer" />
+  <meta property="og:description" content="Frontend Developer—HTML, CSS, JavaScript, React. Portfolio and projects." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Go to home">Vikesh<span class="accent">.</span></a>
+
+      <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="mainNav" class="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/Vikesh-Vishwakarma-Resume.pdf" download>Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container" id="home" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <h1 id="hero-heading">Hi, I'm Vikesh — Frontend Developer</h1>
+        <p class="lead">I build responsive, accessible web apps using HTML, CSS, JavaScript and React. I enjoy turning ideas into user-focused interfaces.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#projects">See projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+
+        <ul class="meta-list">
+          <li><strong>Location:</strong> Mumbai, India</li>
+          <li><strong>Email:</strong> <a href="mailto:vikesh@example.com" target="_blank">vikesh@example.com</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/Vikesh00" target="_blank" rel="noopener">Vikesh00</a></li>
+        </ul>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <!-- Placeholder profile card -->
+        <div class="profile-card">
+          <img src="assets/logo.png" alt="Vikesh Vishwakarma" loading="lazy">
+          <div class="profile-card-body">
+            <h3>Vikesh Vishwakarma</h3>
+            <p>Frontend Developer — HTML / CSS / JS / React</p>
+            <a href="assets" download class="download-resume">Download resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about container" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
+      <p>I’m a frontend developer focused on building fast, accessible, and responsive interfaces. I like writing clean code, learning new libraries, and shipping production-ready web apps.</p>
+
+      <div class="two-col">
+        <div>
+          <h3>What I do</h3>
+          <ul>
+            <li>Responsive UI development (mobile-first)</li>
+            <li>Vanilla JS & modern ES features</li>
+            <li>React & component-based architecture</li>
+            <li>Performance & accessibility improvements</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Tools</h3>
+          <p>VSCode · Git · GitHub · NPM · Chrome DevTools</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects container" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <h2 id="projects-heading">Selected projects</h2>
+        <p class="muted">A small selection of projects showing UI, API integration and interactivity.</p>
+      </div>
+
+      <!-- Filters (JS-driven) -->
+      <div class="project-controls">
+        <div class="tags" role="tablist" aria-label="Filter projects">
+          <button class="tag active" data-filter="all">All</button>
+          <button class="tag" data-filter="react">React</button>
+          <button class="tag" data-filter="vanilla">Vanilla JS</button>
+          <button class="tag" data-filter="ui">UI Clone</button>
+        </div>
+      </div>
+
+      <!-- Project grid (populated by script.js) -->
+      <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+
+    </section>
+
+    <!-- Skills -->
+    <section class="skills container" id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skill-grid">
+        <div class="skill">
+          <h4>Frontend</h4>
+          <p>HTML, CSS (Flexbox / Grid), Responsive Design, Accessibility</p>
+        </div>
+        <div class="skill">
+          <h4>JavaScript</h4>
+          <p>ES6+, DOM, Fetch API, Async/Await,Typescript</p>
+        </div>
+        <div class="skill">
+          <h4>Frameworks</h4>
+          <p>React (hooks, context)</p>
+        </div>
+        <div class="skill">
+          <h4>Tooling</h4>
+          <p>Git, NPM, Chrome DevTools</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact container" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>If you'd like to work together, send a message — or email me directly.</p>
+
+      <div class="contact-grid">
+        <!-- HTML (your existing form, remove onsubmit="return false;") -->
+<form id="contactForm" class="contact-form" aria-label="Contact form">
+  <label>
+    <span>Name</span>
+    <input type="text" id="name" name="name" required />
+  </label>
+  <label>
+    <span>Email</span>
+    <input type="email" id="email" name="email" required />
+  </label>
+  <label>
+    <span>Message</span>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </label>
+
+  <div class="form-actions">
+    <button id="sendBtn" class="btn btn-primary" type="submit">Send message</button>
+    <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=vishwakarmavikesh321@gmail.com" target="_blank">Email directly</a>
+  </div>
+
+  <p id="formNote" class="muted small">This form uses a simple mailto fallback. Connect a backend or service (Formspree) to capture messages.</p>
+  <p id="statusMessage" class="muted small" aria-live="polite"></p>
+</form>
+
+<!-- JS -->
+<script>
+  const form = document.getElementById('contactForm');
+  const btn = document.getElementById('sendBtn');
+  const status = document.getElementById('statusMessage');
+
+  
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xyzqavdj';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = '';
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        status.textContent = 'Message sent! I will reply soon.';
+        form.reset();
+      } else {
+        const data = await res.json().catch(()=>null);
+        const errorMsg = data && data.error ? data.error : 'Failed to send — try again later.';
+        status.textContent = errorMsg;
+      }
+    } catch (err) {
+      status.textContent = 'Network error — please try again.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    }
+  });
+</script>
+
+        <div class="contact-info" aria-hidden="false">
+          <h3>Reach out</h3>
+          <p><strong>Email:</strong> <a href="#">vikesh@example.com</a></p>
+          <p><strong>Location:</strong> Mumbai, India</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Vikesh00" target="_blank" rel="noopener">github.com/Vikesh00</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Vikesh Vish. Built with HTML, CSS & JS.</p>
+        <p class="muted small">Designed for hiring managers — optimized for clarity, performance and accessibility.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
