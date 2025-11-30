@@ -1,4 +1,3 @@
-/* styles.css - clean modern portfolio */
 /* CSS variables */
 :root{
   --bg: #0f1724;
@@ -15,6 +14,7 @@
 }
 
 /* Base reset */
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -28,7 +28,7 @@ body{
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Layout helpers */
+
 .container{
   width:100%;
   max-width:var(--max-width);
@@ -70,14 +70,50 @@ body{
 .nav a:hover{color:var(--text);background:var(--glass)}
 
 /* Mobile nav toggle */
-.nav-toggle{
+/* .nav-toggle{
   display:none;
   background:transparent;border:0;
   padding:8px;border-radius:8px;
 }
 .hamburger{display:block;width:22px;height:2px;background:var(--text);position:relative}
 .hamburger::after,.hamburger::before{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--text)}
-.hamburger::before{top:-7px} .hamburger::after{top:7px}
+.hamburger::before{top:-7px} .hamburger::after{top:7px} */
+
+
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 100;
+  }
+  .nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+}
+
+
 
 /* Hero */
 .hero{
