@@ -3,15 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Update footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Mobile nav toggle
-  // const navToggle = document.getElementById('navToggle');
-  // const mainNav = document.getElementById('mainNav');
-  // navToggle.addEventListener('click', () => {
-  //   const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-  //   navToggle.setAttribute('aria-expanded', !expanded);
-  //   mainNav.classList.toggle('open');
-  // });
-
   const btn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
